@@ -15,7 +15,7 @@ import javax.persistence.ManyToOne;
 @Entity
 @Data
 
-public class Game {
+public class Game extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

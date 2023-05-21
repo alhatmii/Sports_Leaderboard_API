@@ -87,4 +87,5 @@ public class Game extends BaseEntity {
     @JoinColumn(name = "Team_id", referencedColumnName = "Match_id")
     @OneToMany(cascade = CascadeType.ALL)
     List<Team> team;
+
 }

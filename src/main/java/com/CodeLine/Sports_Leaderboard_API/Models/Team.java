@@ -70,7 +70,7 @@ public class Team extends BaseEntity {
 
     @OneToMany(mappedBy = "team2")
     private List<Game> gamesAsTeam2;
-    
+
     public List<Game> getGamesAsTeam1() {
         return gamesAsTeam1;
     }

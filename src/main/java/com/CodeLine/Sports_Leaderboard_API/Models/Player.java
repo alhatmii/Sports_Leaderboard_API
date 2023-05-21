@@ -68,8 +68,6 @@ public class Player extends BaseEntity {
     @ManyToOne
     private Team team;
 
-// ...
-
     public Team getTeam() {
         return team;
     }

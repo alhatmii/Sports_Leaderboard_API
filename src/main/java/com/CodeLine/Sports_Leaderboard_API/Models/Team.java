@@ -65,5 +65,27 @@ public class Team extends BaseEntity {
     @OneToMany(cascade = CascadeType.ALL)
     List<Player> team;
 
+    @OneToMany(mappedBy = "team1")
+    private List<Game> gamesAsTeam1;
+
+    @OneToMany(mappedBy = "team2")
+    private List<Game> gamesAsTeam2;
+    
+    public List<Game> getGamesAsTeam1() {
+        return gamesAsTeam1;
+    }
+
+    public void setGamesAsTeam1(List<Game> gamesAsTeam1) {
+        this.gamesAsTeam1 = gamesAsTeam1;
+    }
+
+    public List<Game> getGamesAsTeam2() {
+        return gamesAsTeam2;
+    }
+
+    public void setGamesAsTeam2(List<Game> gamesAsTeam2) {
+        this.gamesAsTeam2 = gamesAsTeam2;
+    }
+
 
 }

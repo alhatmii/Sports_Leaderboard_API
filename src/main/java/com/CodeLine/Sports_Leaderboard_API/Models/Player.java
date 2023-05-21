@@ -12,4 +12,9 @@ import javax.persistence.Entity;
 @Data
 
 public class Player {
+
+    String player_id;
+    String username;
+    String password;
+    String sport;
 }

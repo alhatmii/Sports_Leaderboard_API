@@ -5,10 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -82,5 +80,11 @@ public class Game extends BaseEntity {
     public void setScore2(int score2) {
         this.score2 = score2;
     }
+    @JoinColumn(name = "Team_id", referencedColumnName = "Match_id")
+    @OneToOne(cascade = CascadeType.ALL)
+    Team Team;
 
+    @JoinColumn(name = "Team_id", referencedColumnName = "Match_id")
+    @OneToMany(cascade = CascadeType.ALL)
+    List<Team> team;
 }

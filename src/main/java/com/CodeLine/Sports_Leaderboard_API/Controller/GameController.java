@@ -1,4 +1,4 @@
 package com.CodeLine.Sports_Leaderboard_API.Controller;
 
-public class GameCreationController {
+public class GameController {
 }

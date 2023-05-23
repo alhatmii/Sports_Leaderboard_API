@@ -1,4 +1,4 @@
 package com.CodeLine.Sports_Leaderboard_API.Repository;
 
-public interface TeamRegistrationRepository {
+public interface GameRepository {
 }

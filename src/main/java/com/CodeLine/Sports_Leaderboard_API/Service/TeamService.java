@@ -1,4 +1,4 @@
 package com.CodeLine.Sports_Leaderboard_API.Service;
 
-public class TeamRegistrationService {
+public class TeamService {
 }

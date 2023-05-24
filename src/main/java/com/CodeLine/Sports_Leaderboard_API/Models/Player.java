@@ -19,6 +19,6 @@ public class Player extends BaseEntity {
     String playerName;
 
     @ManyToOne
-    @JoinColumn(name = "team_id",referencedColumnName = "id") 
+    @JoinColumn(name = "team_id",referencedColumnName = "id")
     Team team;
 }

@@ -14,7 +14,7 @@ import javax.persistence.GenerationType;
 @Getter
 @Entity
 @Data
-public class LeaderBoard {
+public class LeaderBoard extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

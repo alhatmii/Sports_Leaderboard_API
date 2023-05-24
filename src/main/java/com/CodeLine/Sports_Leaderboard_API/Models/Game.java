@@ -21,11 +21,11 @@ public class Game extends BaseEntity {
     String gameInformation;
     @OneToOne
     @JoinColumn(name = "team1_id",referencedColumnName = "id")
-    Team team1;
+    Team teamNumber1;
     @OneToOne
     @JoinColumn(name = "team2_id",referencedColumnName = "id")
-    Team team2;
-    Integer scoreTeam1;
-    Integer scoreTeam2;
+    Team teamNumber2;
+    Integer scoreTeamA;
+    Integer scoreTeamB;
 
 }

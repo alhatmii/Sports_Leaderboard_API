@@ -1,9 +1,11 @@
 package com.CodeLine.Sports_Leaderboard_API.Controller;
 
+import com.CodeLine.Sports_Leaderboard_API.Models.Game;
 import com.CodeLine.Sports_Leaderboard_API.Service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -17,5 +19,10 @@ GameController {
     @RequestMapping(value = "createGame", method = RequestMethod.POST)
     public void createGame() {
         gameService.createGame();
+    }
+    @RequestMapping( value = "getGameById", method = RequestMethod.GET)
+    public Game getGameById(@RequestParam Integer id) {
+        Game gameById = gameService.getGameById(id);
+        return gameById;
     }
 }

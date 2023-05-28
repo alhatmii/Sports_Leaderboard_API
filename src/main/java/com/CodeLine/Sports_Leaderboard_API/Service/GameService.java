@@ -29,4 +29,9 @@ public class GameService {
         gameRepository.save(gameToCreate);
 
     }
+    public Game getGameById(Integer id){
+        Game gameById = gameRepository.getGameById(id);
+        return gameById;
+
+    }
 }

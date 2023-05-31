@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-public class GameRequest {
+
     @Data
     @Getter
     @Setter
@@ -19,8 +19,8 @@ public class GameRequest {
         public static Game convertToGameRequest (GameRequest request){
             Game game = new Game();
             game.setGameInformation(request.getGameInformation());
-            game.setTeam1(TeamRequest.convertToTeamRequest(request.getTeamRequest1()));
-            game.setTeam2(TeamRequest.convertToTeamRequest(request.getTeamRequest2()));
+            game.setTeamNumber1(TeamRequest.convertToTeamRequest(request.getTeamRequest1()));
+            game.setTeamNumber2(TeamRequest.convertToTeamRequest(request.getTeamRequest2()));
             game.setScoreTeam1(request.getScoreTeam1());
             game.setScoreTeam2(request.getScoreTeam2());
             return game;
@@ -36,5 +36,4 @@ public class GameRequest {
             return gameList;
 
         }
-    }
 }

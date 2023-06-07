@@ -6,6 +6,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
     @Data
     @Getter
     @Setter
@@ -14,15 +17,15 @@ import lombok.Setter;
         String gameInformation;
         TeamRequest teamRequest1;
         TeamRequest teamRequest2;
-        Integer scoreTeam1;
-        Integer scoreTeam2;
+        Integer scoreTeamA;
+        Integer scoreTeamB;
         public static Game convertToGameRequest (GameRequest request){
             Game game = new Game();
             game.setGameInformation(request.getGameInformation());
             game.setTeamNumber1(TeamRequest.convertToTeamRequest(request.getTeamRequest1()));
             game.setTeamNumber2(TeamRequest.convertToTeamRequest(request.getTeamRequest2()));
-            game.setScoreTeam1(request.getScoreTeam1());
-            game.setScoreTeam2(request.getScoreTeam2());
+            game.setScoreTeamA(request.getScoreTeamA());
+            game.setScoreTeamB(request.getScoreTeamB());
             return game;
 
         }

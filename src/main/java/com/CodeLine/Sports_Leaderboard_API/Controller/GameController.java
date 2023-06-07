@@ -20,7 +20,8 @@ GameController {
     public void createGame() {
         gameService.createGame();
     }
-    @RequestMapping( value = "getGameById", method = RequestMethod.GET)
+
+    @RequestMapping(value = "getGameById", method = RequestMethod.GET)
     public Game getGameById(@RequestParam Integer id) {
         Game gameById = gameService.getGameById(id);
         return gameById;

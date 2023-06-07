@@ -20,4 +20,10 @@ public class RegistrationService {
         register.setIsActive(true);
        // registrationRepository.save(register);
     }
+    public Registration getRegistrationById(Integer id){
+        Registration registerById = registrationRepository.getRegistrationId(id);
+        return registerById;
+
+    }
+
 }

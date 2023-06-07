@@ -1,9 +1,12 @@
 package com.CodeLine.Sports_Leaderboard_API.RequestObject;
 
 
+import com.CodeLine.Sports_Leaderboard_API.Models.LeaderBoard;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.Date;
 
 @Data
 @Getter
@@ -19,7 +22,7 @@ public class LeaderBoardRequest {
         leaderBoard.setTeamName(request.getTeamName());
         leaderBoard.setWins(request.getWins());
         leaderBoard.setLosses(request.getLosses());
-        leaderBoard.setCreateDate(new Date());
+        leaderBoard.setCreatedDate(new Date());
         leaderBoard.setIsActive(true);
         return leaderBoard;
 

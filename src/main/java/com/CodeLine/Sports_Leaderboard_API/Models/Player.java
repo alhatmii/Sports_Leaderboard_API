@@ -11,14 +11,13 @@ import javax.persistence.*;
 @Entity
 @Data
 
+
 public class Player extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     Integer playerId;
     String playerName;
-
-    @ManyToOne
-    @JoinColumn(name = "team_id",referencedColumnName = "id")
-    Team team;
+    String teamName;
+    String sport;
 }

@@ -1,8 +1,13 @@
 package com.CodeLine.Sports_Leaderboard_API.RequestObject;
 
+import com.CodeLine.Sports_Leaderboard_API.Models.Registration;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 @Data
 @Getter
@@ -21,7 +26,7 @@ public class RegistrationRequest {
         registration.setPassword(request.getPassword());
         registration.setTeamName(request.getTeamName());
         registration.setSportType(request.getSportType());
-        registration.setCreateDate(new Date());
+        registration.setCreatedDate(new Date());
         registration.setIsActive(true);
         return registration;
 

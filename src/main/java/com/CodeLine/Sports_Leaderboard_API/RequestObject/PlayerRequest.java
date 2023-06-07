@@ -16,5 +16,22 @@ public class PlayerRequest {
     String teamName;
     String sport;
 
+    public static Player covertPlayerToRequest(PlayerRequest request) {
+        Player player = new Player();
+        player.setPlayerName(request.getPlayerName());
+        player.setTeamName(request.getTeamName());
+        player.setSport(request.getSport());
+        return player;
+    }
 
+    public static List<Player> convertListToPlayerRequest(List<PlayerRequest> PlayerRequestList) {
+        List<Player> playerList = new ArrayList<>();
+        if (!PlayerRequestList.isEmpty()) {
+            for (PlayerRequest playerRequest : PlayerRequestList) {
+                playerList.add(covertPlayerToRequest(playerRequest));
+            }
+        }
+        return playerList;
+
+    }
 }

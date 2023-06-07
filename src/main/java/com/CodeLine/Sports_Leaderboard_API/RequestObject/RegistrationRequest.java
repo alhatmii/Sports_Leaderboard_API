@@ -20,26 +20,5 @@ public class RegistrationRequest {
     String teamName;
     String sportType;
 
-    public static Registration convertToRegistrationRequest(RegistrationRequest request) {
-        Registration registration = new Registration();
-        registration.setUserName(request.getUserName());
-        registration.setPassword(request.getPassword());
-        registration.setTeamName(request.getTeamName());
-        registration.setSportType(request.getSportType());
-        registration.setCreatedDate(new Date());
-        registration.setIsActive(true);
-        return registration;
 
-    }
-
-    public static List<Registration> convertListToRegistrationRequest(List<RegistrationRequest> RegistrationRequestList) {
-        List<Registration> RegistrationList = new ArrayList<>();
-        if (!RegistrationRequestList.isEmpty()) {
-            for (RegistrationRequest registrationRequest : RegistrationRequestList) {
-                RegistrationList.add(convertToRegistrationRequest(registrationRequest));
-            }
-        }
-        return RegistrationList;
-
-    }
 }

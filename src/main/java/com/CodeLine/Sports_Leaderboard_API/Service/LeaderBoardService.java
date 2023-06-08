@@ -14,7 +14,7 @@ public class LeaderBoardService {
 
     public void createLeaderBoard() {
         LeaderBoard leaderBoard = new LeaderBoard();
-        leaderBoard.setTeamName("RDF");
+        leaderBoard.setTeamName("teamA");
         leaderBoard.setWins(1);
         leaderBoard.setLosses(0);
         leaderBoard.setCreatedDate(new Date());

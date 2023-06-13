@@ -41,7 +41,7 @@ public class PlayerService {
 
         Player player = new Player();
         player.setPlayerId(1);
-        player.setTeamName("All for one");
+        player.setTeamName("hwh1");
         player.setSport("football");
         player.setCreatedDate(new Date());
         player.setUpdatedDate(new Date());

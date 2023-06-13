@@ -20,7 +20,7 @@ public class Team extends BaseEntity {
     Integer wins;
     Integer losses;
     @OneToOne
-    @JoinColumn(name = "register_id", referencedColumnName = "id")
+    @JoinColumn(name = "registerId", referencedColumnName = "id")
     Registration registration;
 
 }

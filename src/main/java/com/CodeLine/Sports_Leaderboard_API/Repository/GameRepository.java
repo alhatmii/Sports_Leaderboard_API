@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface GameRepository extends JpaRepository <Game, Integer> {
-    @Query(value = "SELECT g FROM Game g where g.id= :id")
+    @Query(value = "select g from Game g where g.id= :id")
     Game getGameById(@Param("id") Integer id);
 }

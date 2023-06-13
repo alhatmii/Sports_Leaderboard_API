@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RegistrationRepository {
-    @Query(value = "SELECT r FROM Registration r where r.id= :id")
+    @Query(value = "select r from Registration r where r.id= :id")
     Registration getRegistrationId(@Param("id") Integer id);
 }

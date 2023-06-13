@@ -11,10 +11,10 @@ import java.util.List;
 @Repository
 public interface PlayerRepository extends JpaRepository<Player, Integer> {
 
-    @Query(value = "SELECT s FROM Player s")
+    @Query(value = "select s from Player s")
     List<Player> getAllPlayer();
 
-    @Query(value = "SELECT m FROM Player m where m.id= :id")
+    @Query(value = "select m from Player m where m.id= :id")
     Player getPlayerId(@Param("id") Integer id);
 
 

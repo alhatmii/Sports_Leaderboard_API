@@ -1,6 +1,7 @@
 package com.CodeLine.Sports_Leaderboard_API.Controller;
 
 import com.CodeLine.Sports_Leaderboard_API.Models.LeaderBoard;
+import com.CodeLine.Sports_Leaderboard_API.RequestObject.LeaderBoardRequest;
 import com.CodeLine.Sports_Leaderboard_API.Service.LeaderBoardService;
 import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +17,8 @@ public class LeaderBoardController {
     LeaderBoardService leaderBoardService;
 
     @RequestMapping(value = "createLeaderBoard", method = RequestMethod.POST)
-    public void createLeaderBoard() {
-        leaderBoardService.createLeaderBoard();
+    public void createLeaderBoard(@RequestParam LeaderBoardRequest leaderBoardRequest) {
+        leaderBoardService.createLeaderBoard(leaderBoardRequest);
     }
 
     @RequestMapping(value = "getLeaderBoardById", method = RequestMethod.GET)
@@ -25,4 +26,11 @@ public class LeaderBoardController {
         LeaderBoard leaderBoardById = leaderBoardService.getLeaderBoardById(id);
         return leaderBoardById;
     }
+    @RequestMapping(value = "getLeaderBoardOrderByWins", method = RequestMethod.GET)
+    public LeaderBoard getLeaderBoardOrderByWins(@RequestParam Integer wins) {
+        LeaderBoard leaderBoardByWins = leaderBoardService.getLeaderBoardById(wins);
+        return leaderBoardByWins;
+    }
+
+
 }

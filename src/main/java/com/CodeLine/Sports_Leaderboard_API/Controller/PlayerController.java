@@ -9,18 +9,29 @@ import org.springframework.web.bind.annotation.*;
 import java.text.ParseException;
 import java.util.List;
 
+// RESTful controller that handles incoming HTTP requests and produces the corresponding HTTP responses
 @RestController
+
+// Map a method or a controller class to a specific URL path and HTTP method (Postman App)
 @RequestMapping(value = "Player")
 public class PlayerController {
+
+    // To Automatically Wire dependencies.
     @Autowired
     PlayerService playerService;
 
+    // We use it to show it postman app, depending in the way of method.
+    // This one used for showing player by ID
     @RequestMapping(value = "getPlayerById", method = RequestMethod.GET)
+
+    // To request Parameter from PLayerId
     public Player getPlayerById(@RequestParam Integer id) {
         Player player = playerService.getPlayerById(id);
         return player;
     }
 
+    // We use it to show it postman app, depending in the way of method.
+    // This one used for showing player by ID
     @RequestMapping(value = "RegisterPlayer", method = RequestMethod.POST)
     public void registerPlayers(@RequestBody PlayerRequest playerRequest) {
         playerService.RegisterPlayer(playerRequest);

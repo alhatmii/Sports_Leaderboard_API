@@ -1,7 +1,6 @@
 package com.CodeLine.Sports_Leaderboard_API.Controller;
 
 import com.CodeLine.Sports_Leaderboard_API.Models.Game;
-import com.CodeLine.Sports_Leaderboard_API.ResponseObject.GameResponse;
 import com.CodeLine.Sports_Leaderboard_API.Service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

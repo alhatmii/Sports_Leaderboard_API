@@ -37,12 +37,14 @@ public class GameService {
 
     }
 
-    // Method to show all match Games that stored  in the Database
+    // Method to show all match Games that stored in the Database
     public Game getGameById(Integer id){
         Game gameById = gameRepository.getGameById(id);
         return gameById;
 
     }
+
+    // Method to show all match Games that stored in the Database
     public List<Game> getAllGame(){
         return  gameRepository.getAllGame();
     }

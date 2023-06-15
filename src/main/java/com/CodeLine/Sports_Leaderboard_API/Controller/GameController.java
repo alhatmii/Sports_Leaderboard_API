@@ -19,6 +19,8 @@ GameController {
     @Autowired
     GameService gameService;
 
+    // We use it to show it postman app, depending in the way of method.
+    // This one used for Creating match Game
     @RequestMapping(value = "createGame", method = RequestMethod.POST)
     public String createGame() {
         try {

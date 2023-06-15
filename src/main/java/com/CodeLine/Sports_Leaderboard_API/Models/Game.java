@@ -7,8 +7,12 @@ import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
 
+// To auto generate Getter & Setter for Properties
+
 @Getter
 @Setter
+
+//
 @Entity
 @Data
 

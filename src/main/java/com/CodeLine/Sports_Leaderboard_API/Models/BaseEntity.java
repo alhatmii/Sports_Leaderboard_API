@@ -9,16 +9,22 @@ import org.springframework.data.annotation.CreatedDate;
 import javax.persistence.MappedSuperclass;
 import java.util.Date;
 
+// Inhiritance to All other classes, so we don't repeat our ID.
 @MappedSuperclass
+
+// To auto generate Getter & Setter for Properties
 @Getter
 @Setter
+
+// Makes it easier to work with your Java classes by generating helpful methods automatically
 @Data
 
 public class BaseEntity {
-
-
+    // Creates Date
 @CreatedDate
     Date createdDate;
+
+// Update up tp date
 @UpdateTimestamp
     Date updatedDate;
     Boolean isActive;

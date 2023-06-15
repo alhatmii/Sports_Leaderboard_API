@@ -1,12 +1,10 @@
 package com.CodeLine.Sports_Leaderboard_API.Controller;
 
 import com.CodeLine.Sports_Leaderboard_API.Models.Player;
+import com.CodeLine.Sports_Leaderboard_API.RequestObject.PlayerRequest;
 import com.CodeLine.Sports_Leaderboard_API.Service.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
 import java.util.List;
@@ -24,8 +22,8 @@ public class PlayerController {
     }
 
     @RequestMapping(value = "RegisterPlayer", method = RequestMethod.POST)
-    public void registerPlayers() {
-        playerService.RegisterPlayer();
+    public void registerPlayers(@RequestBody PlayerRequest playerRequest) {
+        playerService.RegisterPlayer(playerRequest);
 
     }
 

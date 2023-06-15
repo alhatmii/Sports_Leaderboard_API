@@ -3,6 +3,7 @@ package com.CodeLine.Sports_Leaderboard_API.Service;
 import com.CodeLine.Sports_Leaderboard_API.Models.Player;
 import com.CodeLine.Sports_Leaderboard_API.Repository.PlayerRepository;
 import com.CodeLine.Sports_Leaderboard_API.Repository.TeamRepository;
+import com.CodeLine.Sports_Leaderboard_API.RequestObject.PlayerRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,18 +18,30 @@ public class PlayerService {
     @Autowired
     TeamRepository teamRepository;
 
-    public void RegisterPlayer() {
-        Player player = new Player();
-        player.setTeamName("OTO");
-        player.setPlayerName("mohammed");
-        player.setSport("Basketball");
-        player.setCreatedDate(new Date());
-        player.setUpdatedDate(new Date());
-        player.setIsActive(Boolean.TRUE);
-        playerRepository.save(player);
+//    public void RegisterPlayer() {
+//        Player player = new Player();
+//        player.setTeamName("ooo");
+//        player.setPlayerName("mohammed");
+//        player.setSport("Basketball");
+//        player.setCreatedDate(new Date());
+//        player.setUpdatedDate(new Date());
+//        player.setIsActive(Boolean.TRUE);
+//        playerRepository.save(player);
+//
+//
+//    }
+public void RegisterPlayer(PlayerRequest playerRequest) {
+    Player player = new Player();
+    player.setTeamName(playerRequest.getTeamName());
+    player.setPlayerName(playerRequest.getPlayerName());
+    player.setSport(playerRequest.getSport());
+    player.setCreatedDate(new Date());
+    player.setUpdatedDate(new Date());
+    player.setIsActive(Boolean.TRUE);
+    playerRepository.save(player);
 
 
-    }
+}
 
 
     public List<Player> getAllPlayers() {

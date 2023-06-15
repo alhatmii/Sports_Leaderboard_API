@@ -31,19 +31,23 @@ public class PlayerController {
     }
 
     // We use it to show it postman app, depending in the way of method.
-    // This one used for showing player by ID
+    // This one used for showing RegisteredPlayers
     @RequestMapping(value = "RegisterPlayer", method = RequestMethod.POST)
     public void registerPlayers(@RequestBody PlayerRequest playerRequest) {
         playerService.RegisterPlayer(playerRequest);
 
     }
 
+    // We use it to show it postman app, depending in the way of method.
+    // This one used for showing AllPlayers
     @RequestMapping(value = "GetAllPlayer")
     public List<Player> generateAllPlayer() {
         List<Player> playerList = playerService.getAllPlayers();
         return playerList;
     }
 
+    // We use it to show it postman app, depending in the way of method.
+    // This one used to UpdatePlayers
     @RequestMapping(value = "updatePlayer")
     public void updatePlayer() throws ParseException {
         playerService.updatePlayer();

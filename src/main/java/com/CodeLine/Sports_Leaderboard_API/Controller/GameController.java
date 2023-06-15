@@ -17,8 +17,13 @@ GameController {
     GameService gameService;
 
     @RequestMapping(value = "createGame", method = RequestMethod.POST)
-    public void createGame() {
-        gameService.createGame();
+    public String createGame() {
+        try {
+            gameService.createGame();
+            return "Game is created successfully";
+        } catch (Exception e){
+            return "Sorry the creation of the game is failed";
+        }
     }
 
     @RequestMapping(value = "getGameById", method = RequestMethod.GET)

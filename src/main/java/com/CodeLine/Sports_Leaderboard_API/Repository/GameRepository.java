@@ -6,8 +6,13 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface GameRepository extends JpaRepository <Game, Integer> {
     @Query(value = "select g from Game g where g.id= :id")
     Game getGameById(@Param("id") Integer id);
+
+    @Query("select g from Game g")
+    List<Game> getAllGame();
 }

@@ -37,7 +37,7 @@ public class Game extends BaseEntity {
     @JoinColumn(name = "team1_id",referencedColumnName = "id")
     Team teamNumber1;
 
-    // To add a relationship between two tables (team1_id & id)
+    // To add a relationship between two tables (team2_id & id)
     @OneToOne
 
     // annotation is used to specify the mapping between two entities in a relational database.

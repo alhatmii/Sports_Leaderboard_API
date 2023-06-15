@@ -41,7 +41,7 @@ public class RegistrationService {
         //registrationRepository.save(register);
     }
 
-    // Method to show all Players by ID that were stored in the Database
+    // Method to show Registrations by ID that were stored in the Database
     public Registration getRegistrationById(Integer id){
         Registration registerById = registrationRepository.getRegistrationId(id);
         return registerById;

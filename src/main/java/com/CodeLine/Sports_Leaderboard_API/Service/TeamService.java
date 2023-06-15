@@ -14,11 +14,15 @@ import java.util.Date;
 @Service
 public class TeamService {
 
-
+    // To Automatically Wire dependencies.
     @Autowired
     RegistrationRepository registrationRepository;
+
+    // To Automatically Wire dependencies.
     @Autowired
     TeamRepository teamRepository;
+
+    // Method to add players manually from HTTP (Postman App)
     public void createTeam(TeamRequest teamRequest){
         Team newTeam = new Team();
         newTeam.setLosses(teamRequest.getLosses());
@@ -29,6 +33,8 @@ public class TeamService {
         teamRepository.save(newTeam);
 
     }
+
+    // Method to show Teams by ID that were stored in the Database
     public Team getTeamById(Integer id){
         Team teamById = teamRepository.getTeamById(id);
         return teamById;

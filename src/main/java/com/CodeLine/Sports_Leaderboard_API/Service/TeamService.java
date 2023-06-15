@@ -9,8 +9,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.Date;
 
+// Used to mark the Class as Service Component, To write the all methods required from the class to perform
+// responsible for processing and coordinating business logic
 @Service
 public class TeamService {
+
+
     @Autowired
     RegistrationRepository registrationRepository;
     @Autowired

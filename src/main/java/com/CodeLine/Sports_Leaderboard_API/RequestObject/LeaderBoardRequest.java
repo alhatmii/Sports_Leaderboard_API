@@ -1,16 +1,15 @@
 package com.CodeLine.Sports_Leaderboard_API.RequestObject;
 
 
-import com.CodeLine.Sports_Leaderboard_API.Models.LeaderBoard;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
+// Makes it easier to work with your Java classes by generating helpful methods automatically (toString, equals, hashCode)
 @Data
+
+// To auto generate Getter & Setter for Properties
 @Getter
 @Setter
 

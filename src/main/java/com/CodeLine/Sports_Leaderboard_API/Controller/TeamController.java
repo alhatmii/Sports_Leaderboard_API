@@ -1,12 +1,10 @@
 package com.CodeLine.Sports_Leaderboard_API.Controller;
 
 import com.CodeLine.Sports_Leaderboard_API.Models.Team;
+import com.CodeLine.Sports_Leaderboard_API.RequestObject.TeamRequest;
 import com.CodeLine.Sports_Leaderboard_API.Service.TeamService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "Team")
@@ -15,8 +13,8 @@ public class TeamController {
     TeamService teamService;
 
     @RequestMapping(value = "RegisterNewTeam", method = RequestMethod.POST)
-    public void registerNewTeam() {
-        teamService.createTeam();
+    public void registerNewTeam(@RequestBody TeamRequest teamRequest) {
+        teamService.createTeam(teamRequest);
     }
 
     @RequestMapping( value = "getTeamById", method = RequestMethod.GET)

@@ -3,6 +3,7 @@ package com.CodeLine.Sports_Leaderboard_API.Service;
 import com.CodeLine.Sports_Leaderboard_API.Models.Team;
 import com.CodeLine.Sports_Leaderboard_API.Repository.RegistrationRepository;
 import com.CodeLine.Sports_Leaderboard_API.Repository.TeamRepository;
+import com.CodeLine.Sports_Leaderboard_API.RequestObject.TeamRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,10 +15,10 @@ public class TeamService {
     RegistrationRepository registrationRepository;
     @Autowired
     TeamRepository teamRepository;
-    public void createTeam(){
+    public void createTeam(TeamRequest teamRequest){
         Team newTeam = new Team();
-        newTeam.setLosses(1);
-        newTeam.setWins(1);
+        newTeam.setLosses(teamRequest.getLosses());
+        newTeam.setWins(teamRequest.getWins());
         newTeam.setCreatedDate(new Date());
         newTeam.setIsActive(true);
         newTeam.setRegistration(registrationRepository.getRegistrationId(1));

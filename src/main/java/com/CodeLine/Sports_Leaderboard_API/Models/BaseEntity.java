@@ -9,7 +9,7 @@ import org.springframework.data.annotation.CreatedDate;
 import javax.persistence.MappedSuperclass;
 import java.util.Date;
 
-// Inhiritance to All other classes, so we don't repeat our ID.
+// Inhiritance to All other classes, so we don't repeat our code.
 @MappedSuperclass
 
 // To auto generate Getter & Setter for Properties

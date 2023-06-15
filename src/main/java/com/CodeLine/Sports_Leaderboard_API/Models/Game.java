@@ -21,6 +21,8 @@ public class Game extends BaseEntity {
 
     // To Indicate primary key
     @Id
+
+    // To specify the strategy of generating IDs (Identity: auto-incrementing column in the database to generate unique identifier values)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     // To add a column in DATABASE
@@ -30,7 +32,7 @@ public class Game extends BaseEntity {
 
     // To add a relationship between two tables (team1_id & id)
     @OneToOne
-    
+
     // annotation is used to specify the mapping between two entities in a relational database.
     @JoinColumn(name = "team1_id",referencedColumnName = "id")
     Team teamNumber1;

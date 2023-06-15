@@ -16,7 +16,7 @@ import java.util.Date;
 @Getter
 @Setter
 
-// Makes it easier to work with your Java classes by generating helpful methods automatically
+// Makes it easier to work with your Java classes by generating helpful methods automatically (toString, equals, hashCode)
 @Data
 
 public class BaseEntity {
